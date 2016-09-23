@@ -35,4 +35,10 @@ messageUI.state.message = 'Welcome!';
 
 ```
 
+```javascript
+// Structure is:
+new UIState(elementToManage, stateObject);
+
+```
+
 Also, it doesnt uses any watcher, So, you dont need to worry about performance, it will update dom only if it's changed.
