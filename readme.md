@@ -20,10 +20,14 @@ Here this little code may help you cope with that. below are examples given abou
 
 // Sample usage
 var messageUI = new UIState(document.getElementById('message-div'), {
-	this.message = 'Initial message';
+	message: 'Initial message',
 	render: function(){
+		// render function does the rendering job, you can even return the dom
         return 'Hello ' + this.message
-    }
+    },
+    onrendered: function(element, content){
+    	// this is optional function to be called when dom generation is complete and rendered
+	}
 });
 
 // now at any point, just change the variable and see the result
